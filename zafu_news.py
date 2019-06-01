@@ -5,8 +5,8 @@ from mail_utility import send_mail
 
 # 接受信息的邮箱
 receiver = 'xixiangshu704@qq.com'
-# 扫描网站的周期 单位 分钟
-scan_time = 5
+# 扫描网站的周期 单位 秒
+scan_time = 5 * 60
 
 zafu_tzgg_title = 'zafu_news-通知公告'
 zafu_jwc_tzgg_title = 'zafu_news-教务处-通知公告'
