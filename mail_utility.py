@@ -1,3 +1,5 @@
+# coding=utf-8
+
 #导入需要使用的模块
 import smtplib
 from email.header import Header

@@ -1,6 +1,6 @@
 # coding=utf-8
 
-import urllib.request
+import urllib
 import codecs
 import os
 import file_utility
