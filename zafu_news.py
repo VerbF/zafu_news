@@ -29,14 +29,19 @@ def zafu_jwc_tzgg():
     for record in result:
         send_mail(zafu_jwc_tzgg_title,record,receiver)
 
+def zafu_yjsb_zxxx():
+    result = web_utility.get_update_zafu_yjsb_zxxx()
+    for record in result:
+        send_mail(zafu_yjsb_zxxx_title,record,receiver)
 
 while True:
-    time.sleep(scan_time * 60)
+    time.sleep(scan_time )
     # zafu 官网通知公告
     zafu_tzgg()
     # zafu jwc 通知公告
     zafu_jwc_tzgg()
     # zafu ie 通知公告
     zafu_ie_tzgg()
- 
+    # zafu yjsb 最新消息
+    zafu_yjsb_zxxx()
  

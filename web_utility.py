@@ -147,32 +147,49 @@ def get_update_zafu_ie_tzgg():
 def get_update_zafu_yjsb_zxxx():
     
     url='http://yjsb.zafu.edu.cn/index.htm'
-    history_file_path = 'history/zafu_yjsb_zxxx.txt'
+    history_dictory_path = 'history/zafu_yjsb/'
+    history_file_path = ''
 
     html = get_web_content(url)
     test_file = open('test.txt','w', encoding='utf8')
     test_file.write(str(html))
     result = []
     #循环找出所有的a标签，并赋值给变量 link
-    for div in html.find_all('table'):    
+    for div in html.find_all('div'):    
         div_class = div.get('class')
         if (not div_class is None) and len(div_class) == 1:
             div_class = div_class[0]
         # 通知公告
-        if div_class == 'winstyle118939':
+        if div_class == 'itemBox':
             record_list = []
-            for a in div.find_all('a',limit=10,recursive=True):
+            news_type = ''
+            # 获取新闻的类型
+            for span in div.find_all('span'):
+                span_class = span.get('class')
+                if (not span_class is None) and len(span_class) == 1:
+                     span_class = span_class[0]
+                if span_class == 'pointer':
+                    span_text = span.get_text()
+                    news_type = span_text
+            # 目前只监控这两个类型的新闻
+            if news_type == '培养工作':
+                history_file_path = history_dictory_path + 'pygz.txt'
+            elif news_type == '学位工作':
+                history_file_path = history_dictory_path + 'xwgz.txt'
+            else:
+                continue
+
+            for a in div.find_all('a',limit=7,recursive=True):
 
                 temp_link = a.get('href')
-                temp_link = temp_link[3:len(temp_link)]
-                info_link=url[0:22] + temp_link
-
+                # temp_link = temp_link[3:len(temp_link)]
+                info_link=url[0:24] + temp_link
                 #把a标签中的文字赋值给info_text,并去除空格
                 info_text=a.get_text(strip=True)
-
                 record = info_text  + ' ' + info_link
                 record_list.append(record)
-            
+            # 需要删除第一行
+            record_list.pop(0)
             # 若是初次运行次程序，将数据写入历史文件中          
             if file_utility.is_empty(history_file_path):
                 file_utility.write_history_file(history_file_path,record_list)
@@ -180,7 +197,9 @@ def get_update_zafu_yjsb_zxxx():
             # 若不是初次运行，与历史文件比较，判断是否有新的新闻
             else:
                 old_record_list = file_utility.read_history_file(history_file_path)
-                result = get_different(record_list,old_record_list)
+                different_record_list = get_different(record_list,old_record_list)
+                if len(different_record_list) != 0:
+                    result = result + different_record_list
                 # 将最新的新闻写入历史文件中
                 file_utility.write_history_file(history_file_path,record_list)
     return result
