@@ -31,7 +31,7 @@ def zafu_jwc_tzgg():
 
 
 while True:
-    time.sleep(scan_time )
+    time.sleep(scan_time * 60)
     # zafu 官网通知公告
     zafu_tzgg()
     # zafu jwc 通知公告
