@@ -42,11 +42,44 @@ passwd = 'kkknehvraimhbfie'
 python zafu_news.py
 ```
 
-若希望在后台运行可使用下面的命令  
+在 linux 下，若希望在后台运行可使用下面的命令  
 
 ```python
 nohup python zafu_news.py &
 ```
+
+### 4. 开机启动
+
+这里只研究了 windows 下如何开机启动，linux 下并不了解。  
+
+在 windows 下开机启动需要两个步骤：
+
+- 将 python 脚本打包成 exe 文件
+- 将生成的 exe 文件添加到开机启动项
+
+#### 生成 exe 文件
+
+将 python 脚本打包成 exe 文件用到了 pyinstaller 这个库，可以直接使用 pip 安装
+
+```python
+pip install PyInstaller
+```
+
+安装好后进入 zafu_news.py 文件所在目录，将 requests 文件夹拷贝一份到此目录。该文件夹的路径因人而异，
+我的路径是 "C:\ProgramData\Anaconda3\Lib\site-packages\requests"。  
+
+拷贝好之后执行下面的命令，生成 exe 文件：
+
+```python
+pyinstaller -F -w zafu_news.py
+```
+
+如果生成成功的话，会出现一个 dist 文件夹，里面有生成好的 exe 文件 zafu_news.exe  
+这里 -w 参数取消了命令行窗口，双击生成好的 exe 文件，会在后台运行。  
+
+#### 添加开机启动项
+
+先为前面生成的 exe 文件创建一个快捷方式，在 win + R ，输入 shell:startup 回车，会打开一个文件夹，将快捷方式拷入该文件夹即可。
 
 ## 备注
 
