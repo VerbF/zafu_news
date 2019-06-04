@@ -151,8 +151,6 @@ def get_update_zafu_yjsb_zxxx():
     history_file_path = ''
 
     html = get_web_content(url)
-    test_file = open('test.txt','w', encoding='utf8')
-    test_file.write(str(html))
     result = []
     #循环找出所有的a标签，并赋值给变量 link
     for div in html.find_all('div'):    
