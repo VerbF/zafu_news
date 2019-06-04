@@ -10,7 +10,7 @@ def send_mail(title,article,receiver):
     #定义邮件地址、账号密码等变量
     host = 'smtp.qq.com'
     user = 'xixiangshu704@foxmail.com'
-    passwd = 'kkknehvraimhbfie'
+    passwd = 'your_password' 
     sender = user
     coding = 'utf8'
     #定义message变量，写邮件内容、邮件头

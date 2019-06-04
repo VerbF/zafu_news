@@ -191,6 +191,22 @@ span.s20_2_{LINE-HEIGHT: 31px;FONT-FAMILY: 宋体;COLOR: #000000;FONT-SIZE: 11pt
                                     <span class="leaderfont118934">
                 ·
                 </span>
+<a href="info/1030/10450.htm" style="TEXT-DECORATION: none" target="_blank"><span class="titlestyle118934">
+                                2019年6月企事业单位招聘信息（二）</span></a>
+<span>
+</span>  
+                                <span class="timestyle118934">2019/06/04</span>
+                                    <span class="leaderfont118934">
+                ·
+                </span>
+<a href="info/1030/10449.htm" style="TEXT-DECORATION: none" target="_blank"><span class="titlestyle118934">
+                                2019年6月企事业单位招聘信息（一）</span></a>
+<span>
+</span>  
+                                <span class="timestyle118934">2019/06/03</span>
+                                    <span class="leaderfont118934">
+                ·
+                </span>
 <a href="https://mp.weixin.qq.com/s?__biz=MzU3ODI3NzgwNQ==&amp;mid=2247491054&amp;idx=1&amp;sn=5706b598f95d79d004f96d4c3c95f85c&amp;chksm=fd76852cca010c3a0fd8cda6316c3e65ad81ede2060b39d7695387e05610fac8d373d963f67a&amp;mpshare=1&amp;scene=23&amp;srcid=#rd" style="TEXT-DECORATION: none" target="_blank"><span class="titlestyle118934">
                                 “峥嵘岁月·红色筑梦” 首届校竹建筑建造文化节正式启动</span></a>
 <span>
@@ -203,23 +219,7 @@ span.s20_2_{LINE-HEIGHT: 31px;FONT-FAMILY: 宋体;COLOR: #000000;FONT-SIZE: 11pt
                                 关于2018-2019春季学期英语口语考试的通知</span></a>
 <span>
 </span>  
-                                <span class="timestyle118934">2019/05/31</span>
-                                    <span class="leaderfont118934">
-                ·
-                </span>
-<a href="info/1030/10446.htm" style="TEXT-DECORATION: none" target="_blank"><span class="titlestyle118934">
-                                2019年五月企事业单位招聘信息（十九）</span></a>
-<span>
-</span>  
-                                <span class="timestyle118934">2019/05/31</span>
-                                    <span class="leaderfont118934">
-                ·
-                </span>
-<a href="info/1025/10445.htm" style="TEXT-DECORATION: none" target="_blank"><span class="titlestyle118934">
-                                “知行致远”——艺术设计学院研究生国美毕业展文化实践行</span></a>
-<span>
-</span>  
-                                <span class="timestyle118934">2019/05/30</span>
+                                <span class="timestyle118934">2019/05/31</span>
 </marquee>
 </td></tr></table><!--#endeditable--></li>
 <li class="b"><!--#begineditable name="简单检索" viewid="118935" tagname="简单检索" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""-->
@@ -822,6 +822,20 @@ jQuery(document).ready(function(){
 <td align="right" class="timestyle118929" nowrap="" valign="middle" width="1%">03-14</td></tr>
 <tr><td align="center" nowrap="" valign="middle" width="10"><span class="leaderfont118929"><img align="absmiddle" border="0" src="dfiles/12761/skin/def_green/arrow3.gif"/></span></td>
 <td align="left" valign="middle">
+<a class="c118929" href="info/1030/10450.htm" target="_blank" title="2019年6月企事业单位招聘信息（二）">
+        2019年6月企事业单位招聘信息（二）
+        </a>
+</td>
+<td align="right" class="timestyle118929" nowrap="" valign="middle" width="1%">06-04</td></tr>
+<tr><td align="center" nowrap="" valign="middle" width="10"><span class="leaderfont118929"><img align="absmiddle" border="0" src="dfiles/12761/skin/def_green/arrow3.gif"/></span></td>
+<td align="left" valign="middle">
+<a class="c118929" href="info/1030/10449.htm" target="_blank" title="2019年6月企事业单位招聘信息（一）">
+        2019年6月企事业单位招聘信息（一）
+        </a>
+</td>
+<td align="right" class="timestyle118929" nowrap="" valign="middle" width="1%">06-03</td></tr>
+<tr><td align="center" nowrap="" valign="middle" width="10"><span class="leaderfont118929"><img align="absmiddle" border="0" src="dfiles/12761/skin/def_green/arrow3.gif"/></span></td>
+<td align="left" valign="middle">
 <a class="c118929" href="info/1030/10446.htm" target="_blank" title="2019年五月企事业单位招聘信息（十九）">
         2019年五月企事业单位招聘信息（十九）
         </a>
@@ -841,20 +855,6 @@ jQuery(document).ready(function(){
         </a>
 </td>
 <td align="right" class="timestyle118929" nowrap="" valign="middle" width="1%">05-29</td></tr>
-<tr><td align="center" nowrap="" valign="middle" width="10"><span class="leaderfont118929"><img align="absmiddle" border="0" src="dfiles/12761/skin/def_green/arrow3.gif"/></span></td>
-<td align="left" valign="middle">
-<a class="c118929" href="info/1030/10422.htm" target="_blank" title="2019年五月企事业单位招聘信息（十六）">
-        2019年五月企事业单位招聘信息（十六）
-        </a>
-</td>
-<td align="right" class="timestyle118929" nowrap="" valign="middle" width="1%">05-28</td></tr>
-<tr><td align="center" nowrap="" valign="middle" width="10"><span class="leaderfont118929"><img align="absmiddle" border="0" src="dfiles/12761/skin/def_green/arrow3.gif"/></span></td>
-<td align="left" valign="middle">
-<a class="c118929" href="info/1030/10421.htm" target="_blank" title="2019年五月企事业单位招聘信息（十五）">
-        2019年五月企事业单位招聘信息（十五）
-        </a>
-</td>
-<td align="right" class="timestyle118929" nowrap="" valign="middle" width="1%">05-27</td></tr>
 </table><!--#endeditable--></dd></dl></div>
 <div class="itemBox">
 <dl>

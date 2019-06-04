@@ -6,7 +6,7 @@ from mail_utility import send_mail
 # 接受信息的邮箱
 receiver = 'xixiangshu704@qq.com'
 # 扫描网站的周期 单位 秒
-scan_time = 5 
+scan_time = 5 * 60
 
 zafu_tzgg_title = 'zafu_news-通知公告'
 zafu_jwc_tzgg_title = 'zafu_news-教务处-通知公告'
@@ -35,7 +35,6 @@ def zafu_yjsb_zxxx():
         send_mail(zafu_yjsb_zxxx_title,record,receiver)
 
 while True:
-    time.sleep(scan_time )
     # zafu 官网通知公告
     zafu_tzgg()
     # zafu jwc 通知公告
@@ -44,4 +43,6 @@ while True:
     zafu_ie_tzgg()
     # zafu yjsb 最新消息
     zafu_yjsb_zxxx()
+    # 扫描间隔时间
+    time.sleep(scan_time )
  
