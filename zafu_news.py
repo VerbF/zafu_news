@@ -16,6 +16,7 @@ zafu_ie_tzgg_title = 'zafu_news-信工学院-通知公告'
 
 def zafu_tzgg():
     result = web_utility.get_update_zafu_tzgg()
+    print(result)
     for record in result:
         send_mail(zafu_tzgg_title,record,receiver)
 

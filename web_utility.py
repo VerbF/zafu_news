@@ -21,13 +21,18 @@ def get_web_content(url):
 # 获取新旧信息的不同
 def get_different(record_list,old_record_list):
     result = []
-    for record in record_list:
-        # 获取历史记录中最新的一条数据，需要去掉末尾的换行符
-        old_first_record = old_record_list[0][0:len(old_record_list[0])-1]
-        if record != old_first_record:
-            result.append(record)
-        else:
-            break
+    # 去掉历史记录中末尾的换行符
+    for index,old_record in enumerate( old_record_list):
+        old_record_list[index] = old_record[0:len(old_record)-1]
+    # 判断哪些是新纪录
+    for index,new_record in enumerate(record_list):
+        isNew = True
+        for index,old_record in enumerate(old_record_list):
+            if old_record == new_record:
+                isNew = False
+                break 
+        if isNew:
+            result.append(new_record)
     return result
 
 # 获得 zafu 官网通知公告的更新
