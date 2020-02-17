@@ -1,12 +1,13 @@
 # coding=utf-8
 import time
+import config as cfg
 import web_utility
 from mail_utility import send_mail 
 
 # 接受信息的邮箱
-receiver = 'xixiangshu704@qq.com'
+receiver = cfg.receiver
 # 扫描网站的周期 单位 秒
-scan_time = 5 * 60
+scan_time = cfg.scan_time
 
 zafu_tzgg_title = 'zafu_news-通知公告'
 zafu_jwc_tzgg_title = 'zafu_news-教务处-通知公告'
@@ -16,7 +17,6 @@ zafu_ie_tzgg_title = 'zafu_news-信工学院-通知公告'
 
 def zafu_tzgg():
     result = web_utility.get_update_zafu_tzgg()
-    print(result)
     for record in result:
         send_mail(zafu_tzgg_title,record,receiver)
 
@@ -36,14 +36,15 @@ def zafu_yjsb_zxxx():
         send_mail(zafu_yjsb_zxxx_title,record,receiver)
 
 while True:
-    # zafu 官网通知公告
-    zafu_tzgg()
-    # zafu jwc 通知公告
-    zafu_jwc_tzgg()
-    # zafu ie 通知公告
-    zafu_ie_tzgg()
-    # zafu yjsb 最新消息
-    zafu_yjsb_zxxx()
+    
+    zafu_tzgg() # zafu 官网通知公告
+    
+    zafu_jwc_tzgg() # zafu jwc 通知公告
+    
+    zafu_ie_tzgg() # zafu ie 通知公告
+    
+    zafu_yjsb_zxxx() # zafu yjsb 最新消息
+
     # 扫描间隔时间
     time.sleep(scan_time )
  

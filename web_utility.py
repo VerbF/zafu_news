@@ -1,6 +1,7 @@
 # coding=utf-8
 
 import urllib
+import ssl
 import codecs
 import os
 import file_utility
@@ -38,7 +39,7 @@ def get_different(record_list,old_record_list):
 # 获得 zafu 官网通知公告的更新
 def get_update_zafu_tzgg():
     
-    url='http://www.zafu.edu.cn/tzgg.htm'
+    url='https://www.zafu.edu.cn/tzgg.htm'
     history_file_path = 'history/zafu_tzgg.txt'
 
     html = get_web_content(url)
@@ -62,7 +63,7 @@ def get_update_zafu_tzgg():
             # 若是初次运行次程序，将数据写入历史文件中          
             if file_utility.is_empty(history_file_path):
                 file_utility.write_history_file(history_file_path,record_list)
-                return None
+                return record_list
             # 若不是初次运行，与历史文件比较，判断是否有新的新闻
             else:
                 old_record_list = file_utility.read_history_file(history_file_path)
@@ -75,7 +76,7 @@ def get_update_zafu_tzgg():
 # 获得 zafu jwc 通知公告的更新
 def get_update_zafu_jwc_tzgg():
     
-    url='http://jwc.zafu.edu.cn/tzgg.htm'
+    url='https://jwc.zafu.edu.cn/tzgg.htm'
     history_file_path = 'history/zafu_jwc_tzgg.txt'
 
     html = get_web_content(url)
@@ -99,7 +100,7 @@ def get_update_zafu_jwc_tzgg():
             # 若是初次运行次程序，将数据写入历史文件中          
             if file_utility.is_empty(history_file_path):
                 file_utility.write_history_file(history_file_path,record_list)
-                return None
+                return record_list
             # 若不是初次运行，与历史文件比较，判断是否有新的新闻
             else:
                 old_record_list = file_utility.read_history_file(history_file_path)
@@ -111,7 +112,7 @@ def get_update_zafu_jwc_tzgg():
 # 获得 zafu ie 通知公告的更新
 def get_update_zafu_ie_tzgg():
     
-    url='http://ie.zafu.edu.cn/xwxx/tzgg.htm'
+    url='https://ie.zafu.edu.cn/xwxx/tzgg.htm'
     history_file_path = 'history/zafu_ie_tzgg.txt'
 
     html = get_web_content(url)
@@ -139,7 +140,7 @@ def get_update_zafu_ie_tzgg():
             # 若是初次运行次程序，将数据写入历史文件中          
             if file_utility.is_empty(history_file_path):
                 file_utility.write_history_file(history_file_path,record_list)
-                return None
+                return record_list
             # 若不是初次运行，与历史文件比较，判断是否有新的新闻
             else:
                 old_record_list = file_utility.read_history_file(history_file_path)
@@ -151,7 +152,7 @@ def get_update_zafu_ie_tzgg():
 # 获得 zafu yjsb 最新信息的更新
 def get_update_zafu_yjsb_zxxx():
     
-    url='http://yjsb.zafu.edu.cn/index.htm'
+    url='https://yjsb.zafu.edu.cn/index.htm'
     history_dictory_path = 'history/zafu_yjsb/'
     history_file_path = ''
 
@@ -196,7 +197,7 @@ def get_update_zafu_yjsb_zxxx():
             # 若是初次运行次程序，将数据写入历史文件中          
             if file_utility.is_empty(history_file_path):
                 file_utility.write_history_file(history_file_path,record_list)
-                return None
+                return record_list
             # 若不是初次运行，与历史文件比较，判断是否有新的新闻
             else:
                 old_record_list = file_utility.read_history_file(history_file_path)

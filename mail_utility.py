@@ -2,15 +2,16 @@
 
 #导入需要使用的模块
 import smtplib
+import config as cfg
 from email.header import Header
 from email.mime.text import MIMEText
 
 #定义发送邮件的函数，传入title,article,receiver参数
 def send_mail(title,article,receiver):
     #定义邮件地址、账号密码等变量
-    host = 'smtp.qq.com'
-    user = 'xixiangshu704@foxmail.com'
-    passwd = 'your_password' 
+    host = cfg.host
+    user = cfg.user
+    passwd = cfg.passwd
     sender = user
     coding = 'utf8'
     #定义message变量，写邮件内容、邮件头
@@ -32,6 +33,6 @@ def send_mail(title,article,receiver):
         #发送完成关闭连接
         mail_client.close()
         print('邮件已成功发送给:'+receiver)
-    except:
+    except Exception as e:
         #如果过程中抛出异常则提示用户
         print('发送失败!')
